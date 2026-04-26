@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { FiEdit3, FiActivity, FiAlertTriangle, FiCheckCircle, FiInfo, FiMoon, FiPlusCircle, FiZap } from 'react-icons/fi';
 import VoiceButton from '../../../components/VoiceButton';
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 export default function Dashboard() {
   const [data, setData] = useState(null);

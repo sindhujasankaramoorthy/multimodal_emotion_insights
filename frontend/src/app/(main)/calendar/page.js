@@ -4,7 +4,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import { FiCalendar, FiInfo } from 'react-icons/fi';
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 export default function Calendar() {
   const [data, setData] = useState([]);

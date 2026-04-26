@@ -27,7 +27,8 @@ app.add_middleware(
 # ======================================
 # MONGODB CONNECTION
 # ======================================
-client = MongoClient("mongodb://localhost:27017/")
+mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
+client = MongoClient(mongo_uri)
 db = client["clinical_mood"]
 users_col = db["users"]
 history_col = db["history"]
@@ -330,9 +331,10 @@ def analyze_chat(data: ChatMessage):
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n--- Starting Clinical Mood API ---")
+    port = int(os.getenv("PORT", 8000))
+    print(f"\n--- Starting Clinical Mood API on port {port} ---")
     print("Dashboard: http://localhost:8000/docs")
     try:
-        uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+        uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
     except Exception as e:
         print(f"FAILED to start server: {e}")

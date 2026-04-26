@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { FiTrendingUp, FiClock, FiAlertCircle } from 'react-icons/fi';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 export default function Progress() {
   const [entries, setEntries] = useState([]);

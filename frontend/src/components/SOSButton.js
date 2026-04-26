@@ -4,7 +4,7 @@ import axios from 'axios';
 import { FiAlertOctagon, FiPhone, FiUser, FiX, FiShield } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 export default function SOSButton() {
   const [isOpen, setIsOpen] = useState(false);

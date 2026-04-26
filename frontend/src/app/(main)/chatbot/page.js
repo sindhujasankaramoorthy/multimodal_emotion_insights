@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiSend, FiUser, FiMessageSquare } from 'react-icons/fi';
 import VoiceButton from '../../../components/VoiceButton';
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 const Typewriter = ({ text, delay = 20, animate = true }) => {
   const [currentText, setCurrentText] = useState(animate ? "" : text);
