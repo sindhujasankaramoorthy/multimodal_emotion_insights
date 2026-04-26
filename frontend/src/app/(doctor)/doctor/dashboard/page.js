@@ -45,13 +45,17 @@ export default function DoctorDashboard() {
 
   return (
     <div style={{ padding: '2rem 3rem' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem' }}>
+      <header 
+        className="nav-header"
+        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem' }}>
         <div>
           <h1 style={{ fontSize: '2rem', fontWeight: 700, color: '#0f172a', margin: '0 0 0.5rem 0' }}>Patient Overview</h1>
           <p style={{ color: '#64748b', margin: 0 }}>Monitor and analyze patient distress indicators in real-time.</p>
         </div>
         
-        <div style={{ position: 'relative', width: '300px' }}>
+        <div 
+          className="nav-search"
+          style={{ position: 'relative', width: '300px' }}>
           <FiSearch style={{ position: 'absolute', top: '12px', left: '16px', color: '#94a3b8' }} />
           <input 
             type="text" 
@@ -77,6 +81,7 @@ export default function DoctorDashboard() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           style={{ background: 'white', borderRadius: '12px', border: '1px solid #e2e8f0', overflow: 'hidden', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}
+          className="table-container"
         >
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
             <thead>

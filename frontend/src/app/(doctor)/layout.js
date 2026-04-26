@@ -32,7 +32,9 @@ export default function DoctorLayout({ children }) {
   return (
     <div style={{ display: 'flex', minHeight: '100vh', width: '100%', background: '#f8fafc' }}>
       {/* Sidebar */}
-      <aside style={{
+      <aside 
+        className="sidebar"
+        style={{
         width: '260px',
         background: '#ffffff',
         borderRight: '1px solid #e2e8f0',

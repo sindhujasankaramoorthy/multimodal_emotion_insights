@@ -37,7 +37,9 @@ export default function MainLayout({ children }) {
   return (
     <div style={{ display: 'flex', minHeight: '100vh', width: '100%' }}>
       {/* Sidebar */}
-      <aside style={{
+      <aside 
+        className="sidebar"
+        style={{
         width: '260px',
         background: 'rgba(255, 255, 255, 0.8)',
         backdropFilter: 'blur(20px)',

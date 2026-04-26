@@ -1,0 +1,17 @@
+{
+  "name": "Clinical Mood Monitor",
+  "short_name": "Mood Monitor",
+  "description": "Professional AI-powered mood analysis and psychiatrist portal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
