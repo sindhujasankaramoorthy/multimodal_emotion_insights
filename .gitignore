@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Node.js
+node_modules/
+.next/
+dist/
+build/
+*.log
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Project specific
+backend_error.log
+backend_startup.log
+test_result.log
+query
